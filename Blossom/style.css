@@ -1,0 +1,254 @@
+body {
+  background-color: #F7D5C1;
+}
+
+
+/* container */
+
+.container {
+  height: 400px;
+  width: 300px;
+  border: 2px solid black;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: fly 3s infinite;
+}
+
+@keyframes fly {
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+container *,
+.container *:before,
+.container *:after {
+  border: 0.12em solid #000000;
+  box-sizing: border-box;
+}
+.center {
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+/* 1.Head */
+
+.blossom-center {
+  height: 130px;
+  width: 136px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-left: 75px;
+  background-color: #ffdcc8;
+}
+
+/* 1.2 Eyes */
+
+.left-eye, .right-eye {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+}
+
+.left-eye {
+  left: 105px;
+  top: 132px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: -0.992px -2.88px 0 6.88px black,
+    -4px -4.96px 0 12.96px #EC563E,
+    -6px -8px 0 16px #fff,
+    -6.2px -8.2px 0 17.5px #000;
+  background-color: white;
+}
+
+.right-eye {
+  left: 160px;
+  top: 132px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: 0.992px -2.88px 0 6.88px black,
+    4px -4.96px 0 12.96px #EC563E,
+    6px -8px 0 16px #fff,
+    6.6px -8.2px 0 17.5px #000;
+  background-color: #fff;
+}
+
+/* 1.3 Hair */
+
+.hair {
+  height: 68px;
+  width: 135.5px;
+  background-color: #F7902E;
+  position: absolute;
+  bottom: 285px;
+  left: 75.5px;
+  border: 1px solid #000;
+  border-radius: 56px 56px 0 0;
+}
+
+.hair:after {
+  position: absolute;
+  content: "";
+  border: none;
+}
+
+.hair:after {
+  border-bottom: 18px solid #ffdcc8;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  top: 51px;
+  left: 58px;
+}
+
+.back-hair {
+  height: 170px;
+  width: 90px;
+  z-index: -2;
+  background-color: #F7902E;
+  border-radius: 0 0 50px 50px;
+  border: 2px dashed #EC563E;
+  position: absolute;
+  left: 95px;
+}
+
+.left-ribbon, .right-ribbon, .center-ribbon {
+  height: 100px;
+  width: 60px;
+  background-color: #EC563E;
+  position: absolute;
+  top: 0;
+  border: 1px solid #000;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.left-ribbon {
+  left: 70px;
+  border-radius: 50%;
+}
+
+.right-ribbon {
+  left: 150px;
+  border-radius: 50%;
+}
+
+.center-ribbon {
+  left: 118px;
+  height: 40px;
+  width: 40px;
+  top: 20px;
+}
+
+.mouth {
+  background-color: #ffffff;
+  height: 12.48px;
+  width: 25px;
+  position: absolute;
+  left: 130px;
+  border: 1px solid #000;
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+  top: 160px;
+}
+
+/* 2 Body */
+
+.torso {
+  background: linear-gradient(#EC563E 30%,
+      #000000 30%,
+      #000 65%,
+      #EC563E 65%);
+  height: 110px;
+  width: 70px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 118px;
+  left: 107px;
+  z-index: -1;
+}
+
+/* 2.1 Hands */
+
+.left-hand, .right-hand {
+  height: 60px;
+  width: 30px;
+  background-color: #ffdcc8;
+  border: 2px solid black;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  z-index: -1;
+}
+
+.left-hand {
+  left: 80px;
+  transform: rotate(135deg);
+  bottom: 200px;
+}
+
+.right-hand {
+  right: 92px;
+  transform: rotate(-125deg);
+  bottom: 198px;
+}
+
+/* 2.2 Legs */
+
+.left-leg, .right-leg {
+  height: 60px;
+  width: 30px;
+}
+
+.left-leg {
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: 280px;
+  left: 108px;
+}
+
+.right-leg {
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: 280px;
+  left: 146px;
+}
+
+.left-leg:before,
+.right-leg:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #000000;
+  border-radius: 0 0 20px 20px;
+  bottom: -0.093em;
+  left: -0.093em;
+}
+
+.left-leg:after,
+.right-leg:after {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 32px;
+  background-color: #000000;
+  bottom: -2.0px;
+  left: -1px;
+  border-radius: 0 0 20px 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,227 @@
+body {
+  background-color: #219fff;
+}
+
+.container {
+  height: 400px;
+  width: 300px;
+  border: 2px solid black;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: fly 3s infinite;
+}
+
+@keyframes fly {
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+container *,
+.container *:before,
+.container *:after {
+border: 0.12em solid #000000;
+box-sizing: border-box;
+}
+
+/* 1. Head */
+
+.bubble-center {
+  height: 130px;
+  width: 136px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-left: 75px;
+  background-color: #ffdcc8;
+}
+
+/* 1.2 Eyes */
+
+.left-eye, .right-eye {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+}
+
+.left-eye {
+  left: 105px;
+  top: 132px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: -0.992px -2.88px 0 6.88px black,
+    -4px -4.96px 0 12.96px #82b1e6,
+    -6px -8px 0 16px #fff,
+    -6.2px -8.2px 0 17.5px #000;
+  background-color: white;
+}
+
+.right-eye {
+  left: 160px;
+  top: 132px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: 0.992px -2.88px 0 6.88px black, 4px -4.96px 0 12.96px #82b1e6,
+    6px -8px 0 16px #fff,
+    6.6px -8.2px 0 17.5px #000;
+  background-color: #fff;
+}
+
+/* 1.3 Hair */
+
+.hair {
+  height: 68px;
+  width: 134.5px;
+  background-color: #ffd902;
+  position: absolute;
+  bottom: 280px;
+  left: 76px;
+  border: 1px solid #000;
+  border-radius: 56px 56px 0 0;
+}
+
+
+.hair:after {
+  position: absolute;
+  content: "";
+  border: none;
+}
+
+.hair:after {
+  border-bottom: 18px solid #ffdcc8;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  top: 51px;
+  left: 58px;
+}
+
+.left-pony, .right-pony {
+  height: 70px;
+  width: 60px;
+  background-color: #ffd902;
+  position: absolute;
+  top: 80px;
+  border: 1px solid #000;
+  z-index: -1;
+}
+
+.left-pony {
+  left: 35px;
+  border-radius: 58% 42% 100% 0 /100% 39% 62% 0;
+  transform: rotate(-10deg)
+}
+
+.right-pony {
+  left: 190px;
+  border-radius: 58% 42% 100% 0 /100% 39% 62% 0;
+  transform: rotate(-65deg)
+}
+
+.mouth {
+  background-color: #ffffff;
+  height: 12.48px;
+  width: 25px;
+  position: absolute;
+  left: 130px;
+  border: 1px solid #000;
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+  top: 160px;
+}
+
+/* 2. Body */
+
+.torso {
+  background: linear-gradient(#82b1e6 30%,
+      #000000 30%,
+      #000 65%,
+      #82b1e6 65%);
+  height: 110px;
+  width: 70px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 118px;
+  left: 107px;
+  z-index: -1;
+}
+
+/* 2.1 Legs */
+
+.left-leg {
+  height: 60px;
+  width: 30px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: 280px;
+  left: 108px;
+}
+
+.right-leg {
+  height: 50px;
+  width: 28.8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  top: 270px;
+  left: 148px
+}
+
+.left-leg:before,
+.right-leg:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #000000;
+  border-radius: 0 0 1.56em 1.56em;
+  bottom: -0.093em;
+  left: -0.093em;
+}
+
+.left-leg:after,
+.right-leg:after {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 32px;
+  background-color: #000;
+  bottom: -2.0px;
+  left: -1px;
+  border-radius: 0 0 1.56em 1.56em;
+}
+
+/* 2.2 Hands */
+
+.left-hand, .right-hand {
+  height: 60px;
+  width: 30px;
+  background-color: #ffdcc8;
+  border: 2px solid black;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  z-index: -1;
+}
+
+.left-hand {
+  left: 80px;
+  transform: rotate(45deg)
+}
+
+.right-hand {
+  right: 92px;
+  transform: rotate(-45deg)
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    font-size: 1.5em;
+  }
+}
